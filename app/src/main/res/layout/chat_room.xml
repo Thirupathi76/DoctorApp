@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_layout"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/chatList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:layout_weight="1"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8.0sp"
+        android:paddingBottom="2dp"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        app:stackFromEnd="true" />
+
+    <LinearLayout
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_vertical"
+        android:paddingTop="1dp"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/smiley"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="4dp"
+            android:paddingStart="4dp"
+            android:src="@drawable/smiley"
+            android:visibility="gone" />
+
+        <!--<EditText
+            android:id="@+id/msg_input"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_et"
+            android:padding="6dp" />-->
+
+        <!--<hani.momanii.supernova_emoji_library.Helper.EmojiconEditText-->
+
+        <EditText
+            android:id="@+id/msg_input"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_corner_bg"
+            android:inputType="textMultiLine"
+            android:padding="6dp" />
+
+        <ImageView
+            android:id="@+id/btn_send"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/send_bg"
+            android:padding="10dp"
+            android:src="@drawable/ic_send"
+            android:text="Send" />
+    </LinearLayout>
+
+</LinearLayout>

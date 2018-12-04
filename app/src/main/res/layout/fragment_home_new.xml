@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/colorPrimary"
+            app:layout_scrollFlags="enterAlways">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/anim_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:padding="10dp"
+                app:layout_collapseMode="pin">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/pickup_address_linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/cartImageView"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <com.marolix.doctorapp.font.TextView_UbuntuRegular
+                                android:id="@+id/pickup_address_type_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="top|start"
+                                android:maxLines="1"
+                                android:text="User"
+                                android:textAllCaps="true"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/white" />
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_down_arrow" />
+                        </LinearLayout>
+
+                        <com.marolix.doctorapp.font.TextView_UbuntuRegular
+                            android:id="@+id/pickup_address_textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pickup_address_type_textView"
+                            android:ellipsize="end"
+                            android:gravity="start"
+                            android:maxLines="1"
+                            android:text="Gachibowli, Hyderabad"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cartImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/ic_settings_white" />
+
+                        <!-- <FrameLayout
+                             android:id="@+id/blueCircleFrameLayout"
+                             android:layout_width="14dp"
+                             android:layout_height="14dp"
+                             android:layout_gravity="top|right|center_vertical|center_horizontal|center|end"
+                             android:background="@drawable/circle_selector_new"
+                             android:visibility="invisible">
+
+                             <com.marolix.doctorapp.font.TextView_UbuntuRegular
+                                 android:id="@+id/countTextView"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_gravity="center"
+                                 android:gravity="center"
+                                 android:textColor="@color/dark_blue_bg"
+                                 android:textSize="10sp" />
+                         </FrameLayout>-->
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/home_banner_frame_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:layout_scrollFlags="exitUntilCollapsed">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/home_banner_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp" />
+
+                    <LinearLayout
+                        android:id="@+id/home_banner_pager_indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="8dp">
+
+                        <!--  <com.viewpagerindicator.CirclePageIndicator
+                                android:id="@+id/home_banner_pager_indicator"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:padding="5dp" />-->
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <com.marolix.doctorapp.font.TextView_UbuntuRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1 - Click Order"
+                        android:visibility="gone"
+                        android:textAllCaps="true"
+                        android:textColor="@color/greenish"
+                        android:textSize="12sp" />
+
+                    <com.marolix.doctorapp.font.TextView_UbuntuLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/easy_to_place_order"
+                        android:textColor="@color/light_grey"
+                        android:textSize="12sp" />
+
+                    <com.marolix.doctorapp.font.TextView_UbuntuRegular
+                        android:id="@+id/home_clean_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/round_fill_white_border_textview"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Place My Order"
+                        android:textAllCaps="true"
+                        android:textColor="@color/dark_blue_bg"
+                        android:textSize="12sp" />
+
+                    <com.marolix.doctorapp.font.TextView_UbuntuRegular
+                        android:id="@+id/oneDayDelivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/one_day_delivery"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:textColor="@color/greenish" />
+                </LinearLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        app:cardCornerRadius="5dp"
+                        app:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:id="@+id/clinic_doc_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:orientation="horizontal"
+                            android:padding="4dp">
+
+                            <LinearLayout
+                                android:layout_width="50dp"
+                                android:layout_height="40dp">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/appointment" />
+
+                            </LinearLayout>
+
+                            <com.marolix.doctorapp.font.TextView_AvenirLTStd_Roman
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="4dp"
+                                android:layout_weight="1"
+                                android:text="Clinics and Doctors" />
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="4dp"
+                                android:src="@drawable/ic_right_arrow" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        app:cardCornerRadius="5dp"
+                        app:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:id="@+id/chat_doctor_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:orientation="horizontal"
+                            android:padding="4dp">
+
+                            <LinearLayout
+                                android:layout_width="50dp"
+                                android:layout_height="40dp">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/chat" />
+
+                            </LinearLayout>
+
+                            <com.marolix.doctorapp.font.TextView_AvenirLTStd_Roman
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="4dp"
+                                android:layout_weight="1"
+                                android:text="Chat with Doctors " />
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="4dp"
+                                android:src="@drawable/ic_right_arrow" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        app:cardCornerRadius="5dp"
+                        app:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:id="@+id/order_medicine_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:orientation="horizontal"
+                            android:padding="4dp">
+
+                            <LinearLayout
+                                android:layout_width="50dp"
+                                android:layout_height="40dp">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/medichine" />
+
+                            </LinearLayout>
+
+                            <com.marolix.doctorapp.font.TextView_AvenirLTStd_Roman
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="4dp"
+                                android:layout_weight="1"
+                                android:text="Order Medicines online" />
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="4dp"
+                                android:src="@drawable/ic_right_arrow" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        app:cardCornerRadius="5dp"
+                        app:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:id="@+id/book_test_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:orientation="horizontal"
+                            android:padding="4dp">
+
+                            <LinearLayout
+                                android:layout_width="50dp"
+                                android:layout_height="40dp">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/test" />
+
+                            </LinearLayout>
+
+                            <com.marolix.doctorapp.font.TextView_AvenirLTStd_Roman
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="4dp"
+                                android:layout_weight="1"
+                                android:text="Book tests, check up and scans " />
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="4dp"
+                                android:src="@drawable/ic_right_arrow" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        app:cardCornerRadius="5dp"
+                        app:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/refer_earn"/>
+
+
+                            <com.marolix.doctorapp.font.TextView_AvenirLTStd_Roman
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:text="Refer and earn and also get 50% off on medicine book or Doctor appointment"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        app:cardCornerRadius="5dp"
+                        app:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/offers"/>
+
+
+                            <com.marolix.doctorapp.font.TextView_AvenirLTStd_Roman
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginTop="10dp"
+
+                                android:text="Offers available on selected items "
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

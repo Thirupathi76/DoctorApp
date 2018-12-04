@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_set_reminder"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/round_corners_background"
+        android:text="set reminder"/>
+
+    <com.marolix.doctorapp.font.TextView_AvenirLTStd_Book
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        android:gravity="center"
+        android:layout_below="@+id/btn_set_reminder"
+        android:layout_marginTop="20dp"
+        android:id="@+id/reminder_text"/>
+
+</RelativeLayout>
