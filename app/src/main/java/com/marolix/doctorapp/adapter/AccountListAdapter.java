@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.marolix.doctorapp.AccountsNextActivity;
 import com.marolix.doctorapp.DoctorsClinicActivity;
+import com.marolix.doctorapp.OfferActivity;
 import com.marolix.doctorapp.R;
 
 public class AccountListAdapter extends RecyclerView.Adapter<AccountListAdapter.ViewHolderClass> {
@@ -34,19 +35,26 @@ public class AccountListAdapter extends RecyclerView.Adapter<AccountListAdapter.
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolderClass viewHolder, int i) {
+    public void onBindViewHolder(@NonNull ViewHolderClass viewHolder, final int i) {
         viewHolder.txt1.setText(specialities[i]);
         viewHolder.txt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
 //                context.startActivity(new Intent(context, DoctorsClinicActivity.class));
+                if (specialities[i].equals("Offers"))
+                    context.startActivity(new Intent(context, OfferActivity.class));
+                else
+                    context.startActivity(new Intent(context, AccountsNextActivity.class));
             }
         });
         viewHolder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                context.startActivity(new Intent(context, AccountsNextActivity.class));
+                if (specialities[i].equals("Offers"))
+                    context.startActivity(new Intent(context, OfferActivity.class));
+                else
+                    context.startActivity(new Intent(context, AccountsNextActivity.class));
             }
         });
 

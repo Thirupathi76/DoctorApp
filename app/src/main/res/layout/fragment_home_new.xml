@@ -434,6 +434,7 @@
                                 android:layout_marginTop="10dp"
                                 android:text="Refer and earn and also get 50% off on medicine book or Doctor appointment"
                                 android:textColor="#000"
+                                android:paddingBottom="4dp"
                                 android:textSize="14sp" />
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
@@ -467,7 +468,7 @@
                                 android:layout_gravity="center"
                                 android:gravity="center"
                                 android:layout_marginTop="10dp"
-
+                                android:paddingBottom="4dp"
                                 android:text="Offers available on selected items "
                                 android:textColor="#000"
                                 android:textSize="14sp" />

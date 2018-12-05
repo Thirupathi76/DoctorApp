@@ -35,11 +35,12 @@
     </string-array>
 
     <string-array name="accounts_array">
+
         <item>My Doctors</item>
+        <item>Offers</item>
         <item>Appointments</item>
         <item>Medical Records</item>
         <item>Orders</item>
-        <item>Offers</item>
         <item>Reminders</item>
         <item>Health Interests</item>
     </string-array>

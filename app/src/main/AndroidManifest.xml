@@ -38,6 +38,8 @@
         <activity android:name=".MedicineBookActivity" />
         <activity android:name=".CartActivity" />
         <activity android:name=".PaymentActivity" />
+
+        <activity android:name=".OfferActivity"/>
         <activity
             android:name=".MainActivity"
             android:theme="@style/NoActionBar" />
