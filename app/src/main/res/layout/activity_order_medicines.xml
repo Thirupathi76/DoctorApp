@@ -33,7 +33,7 @@
                     android:background="@drawable/round_corners_background"
                     android:gravity="center_vertical"
                     android:hint="Search medicines online"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"/>
             </LinearLayout>
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
@@ -109,6 +109,7 @@
                     android:layout_height="36dp"
                     android:src="@drawable/ic_phone"
                     android:layout_margin="2dp"/>
+
                 <com.marolix.doctorapp.font.TextView_AvenirLTStd_Roman
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -118,6 +119,7 @@
                     android:paddingLeft="18dp"
                     android:textSize="16sp"
                     android:text="Call to Order"/>
+
                 <com.marolix.doctorapp.font.TextView_AvenirLTStd_Book
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

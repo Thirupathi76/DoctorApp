@@ -55,7 +55,7 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
         preferencesEditor = preferences.edit();
 
         if (isFirstRun("FIRST_PROMO_CODE")) {
-            inputLayoutPromocode.setHelperText("Use FOOD50 promocode to avail 50% off");
+            inputLayoutPromocode.setHelperText("Use DOCTOR50 promocode to avail 50% off");
         }
         proceed_layout.setOnClickListener(this);
         apply_promocode.setOnClickListener(this);

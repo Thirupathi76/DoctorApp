@@ -7,10 +7,10 @@
 
 
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:id="@+id/appBar">
+        android:background="@color/colorPrimary">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/anim_toolbar"
@@ -27,11 +27,11 @@
                     android:id="@+id/search_medicines"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:paddingLeft="8dp"
                     android:layout_margin="8dp"
                     android:background="@drawable/round_corners_background"
                     android:gravity="center_vertical"
                     android:hint="Search medicines online"
+                    android:paddingLeft="8dp"
                     android:textColor="@color/black" />
             </LinearLayout>
         </android.support.v7.widget.Toolbar>
@@ -56,21 +56,22 @@
             android:textColor="@color/white"
             android:textSize="20sp" />
     </LinearLayout>
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_below="@+id/appBar"
-                    android:layout_above="@+id/bottom_cart_layout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_cart_layout"
+        android:layout_below="@+id/appBar">
 
 
-                    <android.support.v7.widget.RecyclerView
-                        android:id="@+id/recyclerView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="4dp" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp" />
 
 
-                </RelativeLayout>
+    </RelativeLayout>
 
 
-            </RelativeLayout>
+</RelativeLayout>

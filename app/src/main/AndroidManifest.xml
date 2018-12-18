@@ -32,7 +32,7 @@
         <activity android:name=".SpecialitiesActivity" />
         <activity android:name=".DoctorsClinicActivity" />
         <activity android:name=".Chat_Room" />
-        <activity android:name=".OrderMedicinesActivity" />
+        <activity android:name=".OrderMedicinesActivity"/>
         <activity android:name=".UploadPrescriptionActivity" />
         <activity android:name=".TestsBookActivity" />
         <activity android:name=".MedicineBookActivity" />

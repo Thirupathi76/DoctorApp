@@ -78,6 +78,5 @@ public class AccountListAdapter extends RecyclerView.Adapter<AccountListAdapter.
             txt1 = itemView.findViewById(R.id.text_account_det);
             //itemView=imageView.findViewById(R.id.img);
         }
-
     }
 }

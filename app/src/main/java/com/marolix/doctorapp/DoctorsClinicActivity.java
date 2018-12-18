@@ -13,6 +13,7 @@ public class DoctorsClinicActivity extends AppCompatActivity {
      private RecyclerView doctors_rc, clinics_rc;
      private ClinicHAdapter clinicHAdapter;
      private DoctorsVAdapter doctorsVAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
